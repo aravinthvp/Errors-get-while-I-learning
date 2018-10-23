@@ -1,0 +1,19 @@
+while i am doing deeplearning pre  requests i am getting this error then i found the solution ,
+
+
+Step i did,
+
+pip install pandas
+
+
+ERROR i get :
+
+Could not install packages due to an EnvironmentError: [Errno 13] Permission denied: '/usr/local/lib/python2.7/dist-packages/numpy'
+Consider using the `--user` option or check the permissions.
+
+
+Solution I found,
+
+pip install --user pandas
+
+likely happends in scipy and numpy library's
