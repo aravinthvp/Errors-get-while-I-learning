@@ -1,0 +1,10 @@
+sudo chmod 777 spark-2.4.0-bin-hadoop2.7
+
+cd spark-2.4.0-bin-hadoop2.7/
+
+cd python/
+
+jupyter notebook
+
+
+Now jupiter note book will be open
