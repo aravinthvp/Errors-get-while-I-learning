@@ -12,7 +12,7 @@ Could not install packages due to an EnvironmentError: [Errno 13] Permission den
 Consider using the `--user` option or check the permissions.
 
 
-Solution I found,
+Solution I found from stackoverflow,
 
 pip install --user pandas
 
