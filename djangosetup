@@ -1,0 +1,253 @@
+aravind@hacker:~$ sudo apt-get install python3
+[sudo] password for aravind: 
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+python3 is already the newest version (3.6.7-1~18.04).
+The following packages were automatically installed and are no longer required:
+  gconf-service gconf-service-backend gconf2-common
+  libboost-program-options1.65.1 libgconf-2-4 libgoogle-perftools4
+  libllvm6.0:i386 libpcrecpp0v5 libssl-doc libtcmalloc-minimal4
+  libyaml-cpp0.5v5 mongo-tools mongodb-server-core sysstat
+Use 'sudo apt autoremove' to remove them.
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+aravind@hacker:~$ sudo apt-get install python3-pip
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+python3-pip is already the newest version (9.0.1-2.3~ubuntu1.18.04.1).
+The following packages were automatically installed and are no longer required:
+  gconf-service gconf-service-backend gconf2-common
+  libboost-program-options1.65.1 libgconf-2-4 libgoogle-perftools4
+  libllvm6.0:i386 libpcrecpp0v5 libssl-doc libtcmalloc-minimal4
+  libyaml-cpp0.5v5 mongo-tools mongodb-server-core sysstat
+Use 'sudo apt autoremove' to remove them.
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+aravind@hacker:~$ sudo apt-get install python3-venv
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+python3-venv is already the newest version (3.6.7-1~18.04).
+The following packages were automatically installed and are no longer required:
+  gconf-service gconf-service-backend gconf2-common
+  libboost-program-options1.65.1 libgconf-2-4 libgoogle-perftools4
+  libllvm6.0:i386 libpcrecpp0v5 libssl-doc libtcmalloc-minimal4
+  libyaml-cpp0.5v5 mongo-tools mongodb-server-core sysstat
+Use 'sudo apt autoremove' to remove them.
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+aravind@hacker:~$ mkdir firstdjango
+aravind@hacker:~$ cd firstdjango/
+aravind@hacker:~/firstdjango$ ls
+aravind@hacker:~/firstdjango$ python3 -m venv
+usage: venv [-h] [--system-site-packages] [--symlinks | --copies] [--clear]
+            [--upgrade] [--without-pip] [--prompt PROMPT]
+            ENV_DIR [ENV_DIR ...]
+venv: error: the following arguments are required: ENV_DIR
+aravind@hacker:~/firstdjango$ python3 -m venv env
+aravind@hacker:~/firstdjango$ ls
+env
+aravind@hacker:~/firstdjango$ cd env
+aravind@hacker:~/firstdjango/env$ ls
+bin  include  lib  lib64  pyvenv.cfg  share
+aravind@hacker:~/firstdjango/env$ cd bin
+aravind@hacker:~/firstdjango/env/bin$ ls
+activate      activate.fish  easy_install-3.6  pip3    python
+activate.csh  easy_install   pip               pip3.6  python3
+aravind@hacker:~/firstdjango/env/bin$ cd
+aravind@hacker:~$ cd firstdjango/
+aravind@hacker:~/firstdjango$ which python3
+/usr/bin/python3
+aravind@hacker:~/firstdjango$ source env/bin/activate
+(env) aravind@hacker:~/firstdjango$ which python3
+/home/aravind/firstdjango/env/bin/python3
+(env) aravind@hacker:~/firstdjango$ pip3 install django
+Collecting django
+  Cache entry deserialization failed, entry ignored
+
+
+
+
+
+
+^Z
+[1]+  Stopped                 pip3 install django
+(env) aravind@hacker:~/firstdjango$ pip3 install django
+Collecting django
+  Cache entry deserialization failed, entry ignored
+^Z
+[2]+  Stopped                 pip3 install django
+(env) aravind@hacker:~/firstdjango$ pip install django
+Collecting django
+  Cache entry deserialization failed, entry ignored
+
+
+^Z
+[3]+  Stopped                 pip install django
+(env) aravind@hacker:~/firstdjango$ pip install django
+Collecting django
+  Cache entry deserialization failed, entry ignored
+  Using cached https://files.pythonhosted.org/packages/94/9f/a56f7893b1280e5019482260e246ab944d54a9a633a01ed04683d9ce5078/Django-2.2.5-py3-none-any.whl
+Collecting sqlparse (from django)
+  Cache entry deserialization failed, entry ignored
+  Using cached https://files.pythonhosted.org/packages/ef/53/900f7d2a54557c6a37886585a91336520e5539e3ae2423ff1102daf4f3a7/sqlparse-0.3.0-py2.py3-none-any.whl
+Collecting pytz (from django)
+  Cache entry deserialization failed, entry ignored
+  Using cached https://files.pythonhosted.org/packages/87/76/46d697698a143e05f77bec5a526bf4e56a0be61d63425b68f4ba553b51f2/pytz-2019.2-py2.py3-none-any.whl
+Installing collected packages: sqlparse, pytz, django
+Successfully installed django-2.2.5 pytz-2019.2 sqlparse-0.3.0
+(env) aravind@hacker:~/firstdjango$ ls
+env
+(env) aravind@hacker:~/firstdjango$ django-admin
+
+Type 'django-admin help <subcommand>' for help on a specific subcommand.
+
+Available subcommands:
+
+[django]
+    check
+    compilemessages
+    createcachetable
+    dbshell
+    diffsettings
+    dumpdata
+    flush
+    inspectdb
+    loaddata
+    makemessages
+    makemigrations
+    migrate
+    runserver
+    sendtestemail
+    shell
+    showmigrations
+    sqlflush
+    sqlmigrate
+    sqlsequencereset
+    squashmigrations
+    startapp
+    startproject
+    test
+    testserver
+Note that only Django core commands are listed as settings are not properly configured (error: Requested setting INSTALLED_APPS, but settings are not configured. You must either define the environment variable DJANGO_SETTINGS_MODULE or call settings.configure() before accessing settings.).
+(env) aravind@hacker:~/firstdjango$ django-admin startroject helloworld
+No Django settings specified.
+Unknown command: 'startroject'. Did you mean startproject?
+Type 'django-admin help' for usage.
+(env) aravind@hacker:~/firstdjango$ 
+(env) aravind@hacker:~/firstdjango$ django-admin startproject helloworld
+(env) aravind@hacker:~/firstdjango$ ls
+env  helloworld
+(env) aravind@hacker:~/firstdjango$ cd helloworld
+(env) aravind@hacker:~/firstdjango/helloworld$ ls
+helloworld  manage.py
+(env) aravind@hacker:~/firstdjango/helloworld$ cd helloworld/
+(env) aravind@hacker:~/firstdjango/helloworld/helloworld$ ls
+__init__.py  settings.py  urls.py  wsgi.py
+(env) aravind@hacker:~/firstdjango/helloworld/helloworld$ python manage.py runserver
+python: can't open file 'manage.py': [Errno 2] No such file or directory
+(env) aravind@hacker:~/firstdjango/helloworld/helloworld$ c
+c: command not found
+(env) aravind@hacker:~/firstdjango/helloworld/helloworld$ cd
+(env) aravind@hacker:~$ cd firstdjango/
+(env) aravind@hacker:~/firstdjango$ cd helloworld/
+(env) aravind@hacker:~/firstdjango/helloworld$ python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 17 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+
+September 30, 2019 - 16:02:44
+Django version 2.2.5, using settings 'helloworld.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+[30/Sep/2019 16:03:03] "GET / HTTP/1.1" 200 16348
+[30/Sep/2019 16:03:03] "GET /static/admin/css/fonts.css HTTP/1.1" 200 423
+[30/Sep/2019 16:03:04] "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 85876
+[30/Sep/2019 16:03:04] "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 200 86184
+[30/Sep/2019 16:03:04] "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 85692
+Not Found: /favicon.ico
+[30/Sep/2019 16:03:04] "GET /favicon.ico HTTP/1.1" 404 1976
+[30/Sep/2019 16:11:17] "GET / HTTP/1.1" 200 16348
+[30/Sep/2019 16:11:17] "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+/home/aravind/firstdjango/helloworld/manage.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 17 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+
+September 30, 2019 - 16:31:34
+Django version 2.2.5, using settings 'helloworld.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+/home/aravind/firstdjango/helloworld/manage.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 17 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+
+September 30, 2019 - 16:31:37
+Django version 2.2.5, using settings 'helloworld.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+/home/aravind/firstdjango/helloworld/manage.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 17 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+
+September 30, 2019 - 16:31:43
+Django version 2.2.5, using settings 'helloworld.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+/home/aravind/firstdjango/helloworld/manage.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 17 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+
+September 30, 2019 - 16:31:45
+Django version 2.2.5, using settings 'helloworld.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+/home/aravind/firstdjango/helloworld/manage.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 17 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+
+September 30, 2019 - 16:31:56
+Django version 2.2.5, using settings 'helloworld.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+/home/aravind/firstdjango/helloworld/manage.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 17 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+
+September 30, 2019 - 16:31:58
+Django version 2.2.5, using settings 'helloworld.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+
